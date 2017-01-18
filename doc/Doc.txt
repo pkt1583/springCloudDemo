@@ -1,0 +1,4 @@
+Add course
+Add Student
+Enroll to course
+Display Enrolled students
