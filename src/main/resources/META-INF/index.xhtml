@@ -3,17 +3,15 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns:h="http://java.sun.com/jsf/html" xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:p="http://primefaces.org/ui"
       xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core">
 <h:body>
-    <ui:composition template="META-INF/common.xhtml">
+    <ui:composition template="common.xhtml">
         <f:facet name="header" >
             Please login
         </f:facet>
         <ui:define name="content">
             <h:form>
                 <h:panelGrid columns="2">
-                    <p:panel header="Please Select a category">
                         <table>
                             <tr>
                                 <td><h:commandLink action="AddStudent.xhtml" > Add Student</h:commandLink></td>
@@ -25,7 +23,6 @@
                                 </td>
                             </tr>
                         </table>
-                    </p:panel>
                 </h:panelGrid>
             </h:form>
         </ui:define>

@@ -21,12 +21,17 @@ import javax.servlet.ServletException;
 @ComponentScan("org.pkt.springcloud")
 @ImportResource(locations = "classpath:spring-config.xml")
 @EnableAutoConfiguration
-@ServletComponentScan
-public class DemoApplication {
+
+public class DemoApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
-
+	/*@Override
+	protected SpringApplicationBuilder configure
+			(SpringApplicationBuilder application) {
+		return application.sources(
+				new Class[] { DemoApplication.class, WebXmlConfiguration.class});
+	}*/
 }
