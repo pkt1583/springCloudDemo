@@ -9,6 +9,7 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Student {
+
     @Id
     private Integer studentId;
 
@@ -17,6 +18,9 @@ public class Student {
     @ManyToOne
 
     private Course course;
+
+    private String test="new Test";
+
 
     public Integer getStudentId() {
         return studentId;
@@ -40,5 +44,13 @@ public class Student {
 
     public void setCourse(Course course) {
         this.course = course;
+    }
+
+    public String getTest() {
+        return test;
+    }
+
+    public void setTest(String test) {
+        this.test = test;
     }
 }

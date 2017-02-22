@@ -1,7 +1,6 @@
 package org.pkt.springcloud;
 
 import com.sun.faces.config.ConfigureListener;
-import org.apache.myfaces.webapp.StartupServletContextListener;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
@@ -21,7 +20,7 @@ import javax.servlet.ServletException;
 public class WebXmlConfiguration extends SpringBootServletInitializer implements ServletContextAware {
     private ServletContext servletContext;
 
-    @Bean
+    /*@Bean
     public ServletRegistrationBean registerServlet() {
         FacesServlet facesServlet = new FacesServlet();
         ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(facesServlet, "*.xhtml");
@@ -29,10 +28,10 @@ public class WebXmlConfiguration extends SpringBootServletInitializer implements
         return servletRegistrationBean;
     }
 
-   /* @Bean
+   *//* @Bean
     public StartupServletContextListener registerStartUpServletContextListener() {
         return new StartupServletContextListener();
-    }*/
+    }*//*
 
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
@@ -40,14 +39,16 @@ public class WebXmlConfiguration extends SpringBootServletInitializer implements
         servletContext.setInitParameter("primefaces.CLIENT_SIDE_VALIDATION", "true");
         servletContext.setInitParameter("javax.faces.PROJECT_STAGE", "Development");
     }
+
     @Bean
     public ServletListenerRegistrationBean<ConfigureListener> jsfConfigureListener() {
         return new ServletListenerRegistrationBean<ConfigureListener>(new ConfigureListener());
-    }
+    }*/
+
     @Override
     public void setServletContext(ServletContext servletContext) {
         this.servletContext = servletContext;
-        servletContext.setInitParameter("com.sun.faces.forceLoadConfiguration", Boolean.TRUE.toString());
+       // servletContext.setInitParameter("com.sun.faces.forceLoadConfiguration", Boolean.TRUE.toString());
     }
 
 }
