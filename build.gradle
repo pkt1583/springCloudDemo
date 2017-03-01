@@ -50,11 +50,7 @@ dependencies{
     compile 'org.apache.myfaces.core:myfaces-impl:2.2.11'
     compile 'com.sun.faces:jsf-api:2.2.11'
     compile 'com.sun.faces:jsf-impl:2.2.11'
-
-/*    compile 'org.apache.logging.log4j:log4j-api:2.5'
-    compile 'org.apache.logging.log4j:log4j-core:2.5'
-    compile 'org.apache.logging.log4j:log4j-slf4j-impl:2.5'
-    compile 'org.apache.logging.log4j:log4j-jcl:2.5'*/
+    compile 'org.hsqldb:hsqldb:2.3.4'
 
     testCompile 'junit:junit:4.4'
 
