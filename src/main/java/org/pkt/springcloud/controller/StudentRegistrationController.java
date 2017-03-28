@@ -16,12 +16,13 @@ import java.util.List;
 import java.util.Set;
 
 @Controller
+@RequestMapping("/studentRegistration")
 public class StudentRegistrationController {
 
     @Autowired
     private RegistrationService registrationService;
 
-    @RequestMapping(method = RequestMethod.GET,path= "/studentRegistration/showcourse")
+    @RequestMapping(method = RequestMethod.GET,path= "showcourse",produces = "text/json")
     public @ResponseBody List<Course> showCourse(@RequestParam(name = "courseId",required = false)Integer courseId) {
         if(courseId==null) {
             return registrationService.getAllCourses();
