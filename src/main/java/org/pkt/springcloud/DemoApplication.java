@@ -6,12 +6,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ImportResource;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @SpringBootApplication
 @ComponentScan("org.pkt.springcloud")
 @ImportResource(locations = "classpath:spring-config.xml")
-@EnableAutoConfiguration
-
+@EnableWebMvc
 public class DemoApplication extends SpringBootServletInitializer {
 
     public static void main(String[] args) {

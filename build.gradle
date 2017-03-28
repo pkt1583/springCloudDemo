@@ -8,6 +8,7 @@ repositories(){
     mavenCentral()
 }
 
+
 sourceCompatibility = 1.8
 targetCompatibility=1.8
 
@@ -20,16 +21,13 @@ task startProcess{
 
 dependencies{
     compile group: 'org.springframework.cloud', name: 'spring-cloud-dependencies', version: 'Camden.SR5'
-    compile ('org.springframework.boot:spring-boot-actuator:1.5.0.RELEASE'){
+    compile ('org.springframework.boot:spring-boot-actuator'){
         exclude group: 'ch.qos.logback', module: 'logback-classic'
     }
     compile 'org.springframework.boot:spring-boot-actuator:1.5.0.RELEASE'
 
     compile 'org.springframework.boot:spring-boot-starter-aop:1.5.0.RELEASE'
 
-    compile ('org.springframework.boot:spring-boot-starter:1.5.0.RELEASE'){
-            exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
-        }
     compile ('org.springframework.boot:spring-boot-starter-logging:1.5.0.RELEASE'){
         exclude group: 'ch.qos.logback', module: 'logback-classic'
     }
@@ -37,9 +35,10 @@ dependencies{
     compile 'org.springframework.boot:spring-boot-starter-data-jpa:1.5.0.RELEASE'
     compile 'org.springframework.boot:spring-boot-starter-data-rest:1.5.0.RELEASE'
     compile 'org.springframework.boot:spring-boot-starter-jdbc:1.5.0.RELEASE'
+    compile 'org.springframework.data:spring-data-rest-hal-browser:2.6.1.RELEASE'
 
     compile 'org.springframework.boot:spring-boot-starter-web:1.5.0.RELEASE'
-    compile 'org.springframework.boot:spring-boot-starter-tomcat:1.5.0.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-hateoas:1.5.0.RELEASE'
 
     compile 'org.springframework.cloud:spring-cloud-starter-config:1.2.0.RELEASE'
     compile 'org.springframework.cloud:spring-cloud-config-server:1.2.0.RELEASE'
