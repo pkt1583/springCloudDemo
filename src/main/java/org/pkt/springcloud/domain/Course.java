@@ -7,6 +7,7 @@ import java.util.Set;
 @Entity
 public class Course {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer courseId;
 
     @Basic

@@ -1,14 +1,12 @@
 package org.pkt.springcloud.domain;
 
-import javax.persistence.Basic;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
 public class CourseInstructor {
     @Id
+    @GeneratedValue
     private Integer courseInstructorId;
 
     @Basic

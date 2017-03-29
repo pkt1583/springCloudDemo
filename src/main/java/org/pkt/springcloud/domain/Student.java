@@ -2,15 +2,13 @@ package org.pkt.springcloud.domain;
 
 import org.pkt.springcloud.domain.Course;
 
-import javax.persistence.Basic;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
 public class Student {
 
     @Id
+    @GeneratedValue
     private Integer studentId;
 
     @Basic

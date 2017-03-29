@@ -39,12 +39,13 @@ public class StudentRegistrationController {
     }
 
     @RequestMapping(method = RequestMethod.POST,path = "setupdata")
-    public void setUpData(){
+    public @ResponseBody boolean setUpData(){
         for(int i=0;i<5;i++) {
             Course course = new Course();
             course.setCourseName("Course_" + UUID.randomUUID());
             persistService.saveCourse(course);
         }
+        return true;
     }
 
 }
