@@ -15,8 +15,8 @@ public class Student {
 
     @Basic
     private String studentName;
-    @ManyToOne
 
+    @ManyToOne
     private Course course;
 
     private String test="new Test";

@@ -1,9 +1,6 @@
 package org.pkt.springcloud.domain;
 
-import javax.persistence.Basic;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -17,6 +14,17 @@ public class Course {
 
     @OneToMany(mappedBy = "course")
     private Set<Student> courseStudents = new HashSet<>();
+
+    @ManyToOne
+    private CourseInstructor courseInstructor;
+
+    public CourseInstructor getCourseInstructor() {
+        return courseInstructor;
+    }
+
+    public void setCourseInstructor(CourseInstructor courseInstructor) {
+        this.courseInstructor = courseInstructor;
+    }
 
     public Integer getCourseId() {
         return courseId;

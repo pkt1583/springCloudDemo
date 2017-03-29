@@ -19,9 +19,6 @@ public class RegistrationService {
     @Autowired
     private StudentRepository studentRepository;
 
-    public List<Course> getAllCourses(){
-        return courseRepository.findAll();
-    }
 
     public Course getCourseByStudent(Integer studentId){
         return studentRepository.getOne(studentId).getCourse();
