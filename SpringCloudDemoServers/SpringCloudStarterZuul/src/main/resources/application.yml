@@ -1,0 +1,19 @@
+server:
+  port: 9999
+spring:
+  application:
+    name: zuulEdgeService
+eureka:
+  client:
+    service-url:
+    defaultZone: http://localhost:12345/eureka
+#zuul:
+#  routes:
+#    demoapp:
+#      path: /demoapp/*
+#      serviceId: CLOUDDEMO
+#    authenticate:
+#      path: /authenticate/*
+ #     serviceId: AUTHENTICATIONSERVICE
+
+#non Eureka config below

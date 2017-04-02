@@ -1,0 +1,13 @@
+server:
+  port: 12345
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    eureka-service-url-poll-interval-seconds: 30
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}/${server.port}/eureka
+  server:
+    enable-self-preservation: false
