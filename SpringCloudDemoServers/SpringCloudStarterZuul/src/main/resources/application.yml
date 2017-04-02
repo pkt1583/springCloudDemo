@@ -6,7 +6,9 @@ spring:
 eureka:
   client:
     service-url:
-    defaultZone: http://localhost:12345/eureka
+      defaultZone: http://localhost:12345/eureka
+      eureka-service-url-poll-interval-seconds: 30
+   #
 #zuul:
 #  routes:
 #    demoapp:

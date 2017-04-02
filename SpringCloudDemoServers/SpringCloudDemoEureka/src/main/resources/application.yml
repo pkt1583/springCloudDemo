@@ -4,10 +4,10 @@ eureka:
   instance:
     prefer-ip-address: true
   client:
-    fetch-registry: true
-    register-with-eureka: true
-    eureka-service-url-poll-interval-seconds: 30
+    fetch-registry: false
+    register-with-eureka: false
+   # eureka-service-url-poll-interval-seconds: 30
     service-url:
-      defaultZone: http://${eureka.instance.hostname}/${server.port}/eureka
+      defaultZone: http://localhost/${server.port}/eureka
   server:
     enable-self-preservation: false
