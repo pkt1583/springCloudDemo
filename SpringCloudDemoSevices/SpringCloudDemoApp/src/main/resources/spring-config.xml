@@ -4,7 +4,7 @@
        xmlns="http://www.springframework.org/schema/beans" xmlns:tx="http://www.springframework.org/schema/tx"
        xmlns:jdbc="http://www.springframework.org/schema/jdbc"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd">
-    <context:component-scan base-package="org.pkt.org.pkt.springcloud"/>
+    <context:component-scan base-package="org.pkt.springcloud"/>
     <context:annotation-config/>
     <tx:annotation-driven transaction-manager="transactionManager"/>
    <!-- <bean id="dataSource" class="org.apache.tomcat.dbcp.dbcp.BasicDataSource">

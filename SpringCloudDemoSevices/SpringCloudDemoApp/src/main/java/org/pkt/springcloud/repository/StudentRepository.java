@@ -1,6 +1,6 @@
-package org.pkt.repository;
+package org.pkt.springcloud.repository;
 
-import org.pkt.domain.Student;
+import org.pkt.springcloud.domain.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

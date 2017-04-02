@@ -1,11 +1,11 @@
-package org.pkt.service;
+package org.pkt.springcloud.service;
 
-import org.pkt.domain.Course;
-import org.pkt.domain.CourseInstructor;
-import org.pkt.domain.Student;
-import org.pkt.repository.CourseInstructorRepository;
-import org.pkt.repository.CourseRepository;
-import org.pkt.repository.StudentRepository;
+import org.pkt.springcloud.domain.Course;
+import org.pkt.springcloud.domain.CourseInstructor;
+import org.pkt.springcloud.domain.Student;
+import org.pkt.springcloud.repository.CourseInstructorRepository;
+import org.pkt.springcloud.repository.CourseRepository;
+import org.pkt.springcloud.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

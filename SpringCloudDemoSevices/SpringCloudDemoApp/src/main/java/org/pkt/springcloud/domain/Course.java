@@ -1,4 +1,4 @@
-package org.pkt.domain;
+package org.pkt.springcloud.domain;
 
 import javax.persistence.*;
 import java.util.HashSet;

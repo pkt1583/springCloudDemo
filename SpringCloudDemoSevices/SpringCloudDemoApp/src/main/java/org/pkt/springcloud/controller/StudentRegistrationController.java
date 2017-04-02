@@ -1,9 +1,9 @@
-package org.pkt.controller;
+package org.pkt.springcloud.controller;
 
-import org.pkt.domain.Course;
-import org.pkt.service.InformationService;
-import org.pkt.service.PersistService;
-import org.pkt.service.RegistrationService;
+import org.pkt.springcloud.domain.Course;
+import org.pkt.springcloud.service.InformationService;
+import org.pkt.springcloud.service.PersistService;
+import org.pkt.springcloud.service.RegistrationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
