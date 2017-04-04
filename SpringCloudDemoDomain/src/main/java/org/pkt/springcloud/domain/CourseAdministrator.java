@@ -1,6 +1,7 @@
 package org.pkt.springcloud.domain;
 
 import java.util.List;
+import javax.persistence.*;
 
 @Entity
 public class CourseAdministrator {

@@ -6,8 +6,9 @@ eureka:
   client:
     fetch-registry: false
     register-with-eureka: false
-   # eureka-service-url-poll-interval-seconds: 30
-    service-url:
-      defaultZone: http://localhost/${server.port}/eureka
+  eureka:
+    client:
+      service-url:
+        defaultZone: http://localhost:12345/eureka
   server:
     enable-self-preservation: false

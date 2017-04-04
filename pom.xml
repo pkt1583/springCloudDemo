@@ -4,18 +4,22 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter</artifactId>
+        <artifactId>spring-boot-starters</artifactId>
         <version>1.4.3.RELEASE</version>
+        <relativePath/>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.pkt.demo</groupId>
     <artifactId>springCloudDemo-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
+
+
     <modules>
         <module>SpringCloudDemoDomain</module>
-        <module>SpringCloudDemoSevices</module>
         <module>SpringCloudDemoServers</module>
+        <module>SpringCloudDemoSevices</module>
+        <module>SpringCloudDemoApp</module>
     </modules>
 
     <properties>
@@ -24,6 +28,7 @@
         <java.version>1.8</java.version>
         <log42.version>2.5</log42.version>
         <jackson.version>2.8.7</jackson.version>
+        <domain.version>${project.version}</domain.version>
     </properties>
 
     <dependencyManagement>

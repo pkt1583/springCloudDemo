@@ -9,23 +9,21 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>SpringCloudDemoSevices</artifactId>
-    <packaging>pom</packaging>
-
-    <properties>
-        <domain.version>${project.version}</domain.version>
-    </properties>
-    <modules>
-        <module>SpringCloudDemoAuthentication</module>
-        <module>SpringCloudDemoCourseRegistrationService</module>
-        <module>SpringCloudDemoAdministratorService</module>
-        <module>SpringCloudDemoExaminationService</module>
-    </modules>
+    <artifactId>SpringCloudDemoApp</artifactId>
 
     <dependencies>
         <dependency>
+            <groupId>org.pkt.demo</groupId>
+            <artifactId>SpringCloudDemoDomain</artifactId>
+            <version>${domain.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -46,11 +44,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.pkt.demo</groupId>
-            <artifactId>SpringCloudDemoDomain</artifactId>
-            <version>${domain.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -77,5 +70,4 @@
             <artifactId>jstl</artifactId>
         </dependency>
     </dependencies>
-
 </project>
