@@ -14,6 +14,7 @@
     <modules>
         <module>SpringCloudDemoApp</module>
         <module>SpringCloudDemoAuthentication</module>
+        <module> SpringCloudDemoTask</module>
     </modules>
 
     <dependencies>

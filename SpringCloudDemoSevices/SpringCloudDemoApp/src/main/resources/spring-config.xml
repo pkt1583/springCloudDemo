@@ -30,7 +30,7 @@
     <bean id="persistanceUnit" class="org.springframework.orm.jpa.persistenceunit.DefaultPersistenceUnitManager">
         <property name="defaultDataSource" ref="dataSource"/>
         <property name="validationMode" value="AUTO"/>
-        <property name="packagesToScan" value="org.pkt.org.pkt.springcloud.org.pkt.domain"/>
+        <property name="packagesToScan" value="org.pkt.springcloud.domain"/>
 
         <!--<property name="defaultPersistenceUnitName" value="hsqlDB"/>-->
     </bean>

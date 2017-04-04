@@ -1,6 +1,8 @@
 package org.pkt.springcloud.domain;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Student {
@@ -15,8 +17,17 @@ public class Student {
     @ManyToOne
     private Course course;
 
-    private String test="new Test";
+    @ManyToMany
+    private List<Examination> examinations = new ArrayList<>();
+    private String test = "new Test";
 
+    public List<Examination> getExaminations() {
+        return examinations;
+    }
+
+    public void setExaminations(List<Examination> examinations) {
+        this.examinations = examinations;
+    }
 
     public Integer getStudentId() {
         return studentId;
