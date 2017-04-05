@@ -1,3 +1,9 @@
 spring:
   application:
-    name: springclouddemo
+    name: springCloudDemo
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:12345/eureka
+logging:
+  level: fatal
