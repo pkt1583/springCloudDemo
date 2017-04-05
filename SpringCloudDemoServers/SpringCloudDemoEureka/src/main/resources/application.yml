@@ -2,13 +2,20 @@ server:
   port: 12345
 eureka:
   instance:
-    prefer-ip-address: true
+    hostname: localhost
   client:
     fetch-registry: false
     register-with-eureka: false
-  eureka:
-    client:
-      service-url:
-        defaultZone: http://localhost:12345/eureka
-  server:
-    enable-self-preservation: false
+---
+
+spring:
+  profiles: peer
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+     defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+

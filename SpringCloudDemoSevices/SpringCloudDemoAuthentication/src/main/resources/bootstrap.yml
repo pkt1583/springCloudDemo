@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: authenticationService
+  cloud:
+    config:
+      discovery:
+        enabled: true
+      name: springclouddemo
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 10
+    instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    service-url:
+      defaultZone: http://localhost:12345/eureka
